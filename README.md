@@ -1,7 +1,7 @@
 ﻿# This code is the source code implementation for the paper "A Federated Learning Framework for Disease Diagnosis under Non-IID Data."
 
 ## Abstract
-![输入图片说明](/imgs/2024-06-17/pc3jdcrY57PVBpHt.png)
+![输入图片说明](https://github.com/csmaxuebin/D-Net/blob/main/tp/%7B09B7C755-4D59-45db-B5B8-9488C462A79F%7D.png)
 Federated learning has become one of the common frameworks for disease diagnosis because of its characteristics of protecting the privacy of local data and overcoming data islands. Recently, many disease diagnosis methods based on federated learning have been proposed, but most of them do not aim at the characteristics of non-independent and identically distributed (non-IID). Therefore, this paper proposes a disease diagnosis framework based on federated learning to improve the accuracy of disease prediction under non-IID. This framework has two main innovations: data sharing strategy method and image segmentation model. In the data distribution, it can improve the prediction accuracy when the data are not independent and identically distributed. In the stage of image segmentation, this paper proposes D-Net, which can realize the accurate segmentation of the image under the condition of low parameters. Finally, the experimental results on the datasets show that this framework can improve the accuracy of disease diagnosis.
 
 
@@ -101,7 +101,7 @@ Federated learning has become one of the common frameworks for disease diagnosis
 
 ##  Experimental Results
 The resultssection of the document showcases the effectiveness of a proposed federated learning framework tailored for disease diagnosis under non-IID data. It emphasizes two main innovations: a data sharing strategy and an image segmentation model, D-Net. These components significantly enhance prediction accuracy and model efficiency in handling non-IID data conditions typical in medical scenarios. The framework was rigorously tested on various real-world datasets, demonstrating improvements in accuracy and computational efficiency over existing methods. Quantitative metrics such as model accuracy, loss, and computational resources underscored the practical applicability and robustness of the framework. Overall, the experimental outcomes validate the framework's potential in real-world medical applications, highlighting its capability to manage diverse data distributions securely and efficiently without compromising privacy.
-![输入图片说明](/imgs/2024-06-17/hE5bcJzqc4OvfYBX.png)
+![输入图片说明](https://github.com/csmaxuebin/D-Net/blob/main/tp/%7BEB0F48D2-016F-4bbe-AA9A-EC07F3BB1189%7D.png)
 
 
 ```
