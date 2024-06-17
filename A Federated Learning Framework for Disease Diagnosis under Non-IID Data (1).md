@@ -101,7 +101,7 @@ Federated learning has become one of the common frameworks for disease diagnosis
 
 ##  Experimental Results
 The resultssection of the document showcases the effectiveness of a proposed federated learning framework tailored for disease diagnosis under non-IID data. It emphasizes two main innovations: a data sharing strategy and an image segmentation model, D-Net. These components significantly enhance prediction accuracy and model efficiency in handling non-IID data conditions typical in medical scenarios. The framework was rigorously tested on various real-world datasets, demonstrating improvements in accuracy and computational efficiency over existing methods. Quantitative metrics such as model accuracy, loss, and computational resources underscored the practical applicability and robustness of the framework. Overall, the experimental outcomes validate the framework's potential in real-world medical applications, highlighting its capability to manage diverse data distributions securely and efficiently without compromising privacy.
-![输入图片说明](/imgs/2024-06-17/hE5bcJzqc4OvfYBX.png)
+![输入图片说明](https://github.com/csmaxuebin/D-Net/blob/main/tp/%7BEB0F48D2-016F-4bbe-AA9A-EC07F3BB1189%7D.png)
 
 
 ```
