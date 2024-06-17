@@ -1,0 +1,19 @@
+MODEL:
+    MODEL_UID: "unet"
+    NUM_CLASSES: 2
+    # PRETRAINED_MODEL_PATH: "pretrained_model/unet-Epoch_00110-valid98.pth"
+    PRETRAINED_MODEL_PATH: "/home/SunWenhui/2dunet/experiments/lungseg-Epoch_00299.pth"
+
+DATALOADER:
+    TRAIN_CROP_SIZE: [192, 288]
+    BATCH_SIZE_PER_GPU: 1
+    NUM_WORKERS: 8
+    SAMPLE_NUMBER: -1     # All CT images
+
+DATASETS:
+    # DATA_ROOT: "NCOV-BF/size368x368-dlmask"
+    DATA_ROOT: "/home/SunWenhui/2dunet/NCOV-BF"
+
+TEST:
+    LOG_FILE: "test.log"
+    RESULE_HOME: "unet-results"
