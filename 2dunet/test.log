@@ -1,0 +1,30 @@
+[32m[I 210420 02:16:44 test:55](B[m Config cfgs/test.yaml...
+[32m[I 210420 02:16:44 test:56](B[m {
+     "MODEL": {
+      "MODEL_UID": "unet",
+      "NUM_CLASSES": 2,
+      "PRETRAINED_MODEL_PATH": "/home/SunWenhui/2dunet/experiments/lungseg-Epoch_00299.pth"
+     },
+     "DATALOADER": {
+      "TRAIN_CROP_SIZE": [
+       192,
+       288
+      ],
+      "BATCH_SIZE_PER_GPU": 1,
+      "NUM_WORKERS": 8,
+      "SAMPLE_NUMBER": -1
+     },
+     "DATASETS": {
+      "DATA_ROOT": "/home/SunWenhui/2dunet/NCOV-BF"
+     },
+     "TEST": {
+      "LOG_FILE": "test.log",
+      "RESULE_HOME": "unet-results"
+     }
+    }
+[33m[W 210420 02:16:44 test:57](B[m Loading init model path /home/SunWenhui/2dunet/experiments/lungseg-Epoch_00299.pth
+[32m[I 210420 02:16:44 test:66](B[m Do evaluation...
+[32m[I 210420 02:16:45 test:73](B[m [{'name': '/home/SunWenhui/2dunet/NCOV-BF/NpyData/p02-111111.npy', 'num_frames': 84, 'shape': (84, 512, 512)}]
+[32m[I 210420 02:16:47 test:73](B[m [{'name': '/home/SunWenhui/2dunet/NCOV-BF/NpyData/p01-111111.npy', 'num_frames': 217, 'shape': (217, 512, 512)}]
+[32m[I 210420 02:16:51 test:73](B[m [{'name': '/home/SunWenhui/2dunet/NCOV-BF/NpyData/n01-00000.npy', 'num_frames': 160, 'shape': (160, 512, 512)}]
+[32m[I 210420 02:16:54 test:73](B[m [{'name': '/home/SunWenhui/2dunet/NCOV-BF/NpyData/n02-00000.npy', 'num_frames': 197, 'shape': (197, 512, 512)}]
