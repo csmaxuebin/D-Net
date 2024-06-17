@@ -1,0 +1,426 @@
+[32m[I 210419 11:42:54 train:88](B[m Config cfgs/trainval.yaml...
+[32m[I 210419 11:42:54 train:89](B[m {
+     "MODEL": {
+      "MODEL_UID": "unet",
+      "NUM_CLASSES": 2
+     },
+     "DATALOADER": {
+      "TRAIN_CROP_SIZE": [
+       192,
+       288
+      ],
+      "BATCH_SIZE_PER_GPU": 1,
+      "NUM_WORKERS": 8,
+      "SAMPLE_NUMBER": 48
+     },
+     "SOLVER": {
+      "LEARNING_RATE": "1e-3",
+      "WEIGHT_DECAY": 0,
+      "LR_DECAY": 1,
+      "TRAIN_EPOCH": 300,
+      "SNAPSHOT_FREQ": 10,
+      "SNAPSHOT_HOME": "experiments",
+      "SNAPSHOT_MODEL_TPL": "lungseg-Epoch_{:05d}.pth",
+      "LOG_FILE": "experiments/train.log",
+      "INIT_MODEL_PATH": "",
+      "INIT_MODEL_STRICT": "True",
+      "RESUME_EPOCH": 0
+     },
+     "DATASETS": {
+      "DATA_ROOT": "/home/SunWenhui/2dunet/NCOV-BF"
+     }
+    }
+[32m[I 210419 11:42:54 train:95](B[m Setting Dataloader | dset: 4 / loader: 4, | N: -1
+[32m[I 210419 11:43:00 train:123](B[m EN | E-I [0-4] | CE: 0.61739 | TrainmIOU: 0.410 | dT/rT: 1.190 / 4.944
+[32m[I 210419 11:43:00 train:129](B[m Dump weights experiments/lungseg-Epoch_00000.pth to disk...
+[32m[I 210419 11:43:00 train:139](B[m Do evaluation...
+[32m[I 210419 11:43:03 train:151](B[m VALIDATION | E [0] | CE: 0.75360 | ValmIOU: 0.188
+[32m[I 210419 11:43:08 train:123](B[m EN | E-I [1-4] | CE: 0.40249 | TrainmIOU: 0.682 | dT/rT: 1.138 / 4.514
+[32m[I 210419 11:43:14 train:123](B[m EN | E-I [2-4] | CE: 0.36196 | TrainmIOU: 0.753 | dT/rT: 1.440 / 4.495
+[32m[I 210419 11:43:20 train:123](B[m EN | E-I [3-4] | CE: 0.32429 | TrainmIOU: 0.799 | dT/rT: 1.177 / 4.499
+[32m[I 210419 11:43:26 train:123](B[m EN | E-I [4-4] | CE: 0.31133 | TrainmIOU: 0.793 | dT/rT: 1.277 / 4.492
+[32m[I 210419 11:43:31 train:123](B[m EN | E-I [5-4] | CE: 0.28661 | TrainmIOU: 0.821 | dT/rT: 1.236 / 4.495
+[32m[I 210419 11:43:37 train:123](B[m EN | E-I [6-4] | CE: 0.26907 | TrainmIOU: 0.831 | dT/rT: 1.383 / 4.492
+[32m[I 210419 11:43:43 train:123](B[m EN | E-I [7-4] | CE: 0.25612 | TrainmIOU: 0.853 | dT/rT: 1.343 / 4.493
+[32m[I 210419 11:43:49 train:123](B[m EN | E-I [8-4] | CE: 0.24526 | TrainmIOU: 0.842 | dT/rT: 1.292 / 4.497
+[32m[I 210419 11:43:55 train:123](B[m EN | E-I [9-4] | CE: 0.23065 | TrainmIOU: 0.846 | dT/rT: 1.323 / 4.491
+[32m[I 210419 11:44:00 train:123](B[m EN | E-I [10-4] | CE: 0.24653 | TrainmIOU: 0.808 | dT/rT: 1.192 / 4.496
+[32m[I 210419 11:44:00 train:129](B[m Dump weights experiments/lungseg-Epoch_00010.pth to disk...
+[32m[I 210419 11:44:00 train:139](B[m Do evaluation...
+[32m[I 210419 11:44:03 train:151](B[m VALIDATION | E [10] | CE: 0.40373 | ValmIOU: 0.117
+[32m[I 210419 11:44:09 train:123](B[m EN | E-I [11-4] | CE: 0.21537 | TrainmIOU: 0.846 | dT/rT: 1.340 / 4.491
+[32m[I 210419 11:44:14 train:123](B[m EN | E-I [12-4] | CE: 0.20533 | TrainmIOU: 0.842 | dT/rT: 1.338 / 4.499
+[32m[I 210419 11:44:20 train:123](B[m EN | E-I [13-4] | CE: 0.19348 | TrainmIOU: 0.864 | dT/rT: 1.303 / 4.494
+[32m[I 210419 11:44:26 train:123](B[m EN | E-I [14-4] | CE: 0.18503 | TrainmIOU: 0.863 | dT/rT: 1.364 / 4.494
+[32m[I 210419 11:44:32 train:123](B[m EN | E-I [15-4] | CE: 0.17446 | TrainmIOU: 0.872 | dT/rT: 1.363 / 4.492
+[32m[I 210419 11:44:38 train:123](B[m EN | E-I [16-4] | CE: 0.16964 | TrainmIOU: 0.875 | dT/rT: 1.242 / 4.500
+[32m[I 210419 11:44:43 train:123](B[m EN | E-I [17-4] | CE: 0.16122 | TrainmIOU: 0.877 | dT/rT: 1.352 / 4.499
+[32m[I 210419 11:44:49 train:123](B[m EN | E-I [18-4] | CE: 0.15460 | TrainmIOU: 0.884 | dT/rT: 1.241 / 4.502
+[32m[I 210419 11:44:55 train:123](B[m EN | E-I [19-4] | CE: 0.15038 | TrainmIOU: 0.875 | dT/rT: 1.371 / 4.492
+[32m[I 210419 11:45:01 train:123](B[m EN | E-I [20-4] | CE: 0.14125 | TrainmIOU: 0.891 | dT/rT: 1.379 / 4.494
+[32m[I 210419 11:45:01 train:129](B[m Dump weights experiments/lungseg-Epoch_00020.pth to disk...
+[32m[I 210419 11:45:01 train:139](B[m Do evaluation...
+[32m[I 210419 11:45:03 train:151](B[m VALIDATION | E [20] | CE: 0.15535 | ValmIOU: 0.874
+[32m[I 210419 11:45:09 train:123](B[m EN | E-I [21-4] | CE: 0.13493 | TrainmIOU: 0.894 | dT/rT: 1.214 / 4.495
+[32m[I 210419 11:45:15 train:123](B[m EN | E-I [22-4] | CE: 0.13208 | TrainmIOU: 0.889 | dT/rT: 1.240 / 4.499
+[32m[I 210419 11:45:20 train:123](B[m EN | E-I [23-4] | CE: 0.12636 | TrainmIOU: 0.895 | dT/rT: 1.254 / 4.495
+[32m[I 210419 11:45:26 train:123](B[m EN | E-I [24-4] | CE: 0.12111 | TrainmIOU: 0.898 | dT/rT: 1.245 / 4.497
+[32m[I 210419 11:45:32 train:123](B[m EN | E-I [25-4] | CE: 0.16643 | TrainmIOU: 0.782 | dT/rT: 1.210 / 4.496
+[32m[I 210419 11:45:38 train:123](B[m EN | E-I [26-4] | CE: 0.12486 | TrainmIOU: 0.870 | dT/rT: 1.252 / 4.496
+[32m[I 210419 11:45:43 train:123](B[m EN | E-I [27-4] | CE: 0.11963 | TrainmIOU: 0.878 | dT/rT: 1.196 / 4.496
+[32m[I 210419 11:45:49 train:123](B[m EN | E-I [28-4] | CE: 0.11629 | TrainmIOU: 0.876 | dT/rT: 1.362 / 4.499
+[32m[I 210419 11:45:55 train:123](B[m EN | E-I [29-4] | CE: 0.11097 | TrainmIOU: 0.883 | dT/rT: 1.361 / 4.495
+[32m[I 210419 11:46:01 train:123](B[m EN | E-I [30-4] | CE: 0.12274 | TrainmIOU: 0.864 | dT/rT: 1.315 / 4.492
+[32m[I 210419 11:46:01 train:129](B[m Dump weights experiments/lungseg-Epoch_00030.pth to disk...
+[32m[I 210419 11:46:01 train:139](B[m Do evaluation...
+[32m[I 210419 11:46:03 train:151](B[m VALIDATION | E [30] | CE: 0.42448 | ValmIOU: 0.142
+[32m[I 210419 11:46:09 train:123](B[m EN | E-I [31-4] | CE: 0.10373 | TrainmIOU: 0.893 | dT/rT: 1.306 / 4.497
+[32m[I 210419 11:46:15 train:123](B[m EN | E-I [32-4] | CE: 0.09592 | TrainmIOU: 0.903 | dT/rT: 1.231 / 4.493
+[32m[I 210419 11:46:20 train:123](B[m EN | E-I [33-4] | CE: 0.09401 | TrainmIOU: 0.907 | dT/rT: 1.307 / 4.494
+[32m[I 210419 11:46:26 train:123](B[m EN | E-I [34-4] | CE: 0.09497 | TrainmIOU: 0.899 | dT/rT: 1.301 / 4.499
+[32m[I 210419 11:46:32 train:123](B[m EN | E-I [35-4] | CE: 0.08927 | TrainmIOU: 0.906 | dT/rT: 1.311 / 4.492
+[32m[I 210419 11:46:38 train:123](B[m EN | E-I [36-4] | CE: 0.08275 | TrainmIOU: 0.919 | dT/rT: 1.268 / 4.495
+[32m[I 210419 11:46:44 train:123](B[m EN | E-I [37-4] | CE: 0.08339 | TrainmIOU: 0.916 | dT/rT: 1.300 / 4.495
+[32m[I 210419 11:46:50 train:123](B[m EN | E-I [38-4] | CE: 0.08706 | TrainmIOU: 0.898 | dT/rT: 1.350 / 4.496
+[32m[I 210419 11:46:55 train:123](B[m EN | E-I [39-4] | CE: 0.08588 | TrainmIOU: 0.898 | dT/rT: 1.223 / 4.498
+[32m[I 210419 11:47:01 train:123](B[m EN | E-I [40-4] | CE: 0.08831 | TrainmIOU: 0.895 | dT/rT: 1.194 / 4.497
+[32m[I 210419 11:47:01 train:129](B[m Dump weights experiments/lungseg-Epoch_00040.pth to disk...
+[32m[I 210419 11:47:01 train:139](B[m Do evaluation...
+[32m[I 210419 11:47:03 train:151](B[m VALIDATION | E [40] | CE: 0.26584 | ValmIOU: 0.638
+[32m[I 210419 11:47:09 train:123](B[m EN | E-I [41-4] | CE: 0.08196 | TrainmIOU: 0.902 | dT/rT: 1.325 / 4.499
+[32m[I 210419 11:47:15 train:123](B[m EN | E-I [42-4] | CE: 0.08502 | TrainmIOU: 0.891 | dT/rT: 1.367 / 4.496
+[32m[I 210419 11:47:21 train:123](B[m EN | E-I [43-4] | CE: 0.07548 | TrainmIOU: 0.910 | dT/rT: 1.254 / 4.498
+[32m[I 210419 11:47:26 train:123](B[m EN | E-I [44-4] | CE: 0.07616 | TrainmIOU: 0.906 | dT/rT: 1.361 / 4.492
+[32m[I 210419 11:47:32 train:123](B[m EN | E-I [45-4] | CE: 0.09400 | TrainmIOU: 0.873 | dT/rT: 1.295 / 4.505
+[32m[I 210419 11:47:38 train:123](B[m EN | E-I [46-4] | CE: 0.07133 | TrainmIOU: 0.912 | dT/rT: 1.174 / 4.496
+[32m[I 210419 11:47:44 train:123](B[m EN | E-I [47-4] | CE: 0.06995 | TrainmIOU: 0.908 | dT/rT: 1.339 / 4.497
+[32m[I 210419 11:47:50 train:123](B[m EN | E-I [48-4] | CE: 0.11727 | TrainmIOU: 0.827 | dT/rT: 1.311 / 4.497
+[32m[I 210419 11:47:55 train:123](B[m EN | E-I [49-4] | CE: 0.11128 | TrainmIOU: 0.845 | dT/rT: 1.330 / 4.495
+[32m[I 210419 11:48:01 train:123](B[m EN | E-I [50-4] | CE: 0.07783 | TrainmIOU: 0.892 | dT/rT: 1.301 / 4.498
+[32m[I 210419 11:48:01 train:129](B[m Dump weights experiments/lungseg-Epoch_00050.pth to disk...
+[32m[I 210419 11:48:01 train:139](B[m Do evaluation...
+[32m[I 210419 11:48:04 train:151](B[m VALIDATION | E [50] | CE: 0.08991 | ValmIOU: 0.912
+[32m[I 210419 11:48:09 train:123](B[m EN | E-I [51-4] | CE: 0.07414 | TrainmIOU: 0.902 | dT/rT: 1.210 / 4.507
+[32m[I 210419 11:48:15 train:123](B[m EN | E-I [52-4] | CE: 0.10356 | TrainmIOU: 0.850 | dT/rT: 1.341 / 4.512
+[32m[I 210419 11:48:21 train:123](B[m EN | E-I [53-4] | CE: 0.08116 | TrainmIOU: 0.877 | dT/rT: 1.239 / 4.513
+[32m[I 210419 11:48:27 train:123](B[m EN | E-I [54-4] | CE: 0.08430 | TrainmIOU: 0.886 | dT/rT: 1.362 / 4.514
+[32m[I 210419 11:48:33 train:123](B[m EN | E-I [55-4] | CE: 0.08024 | TrainmIOU: 0.879 | dT/rT: 1.371 / 4.498
+[32m[I 210419 11:48:38 train:123](B[m EN | E-I [56-4] | CE: 0.07781 | TrainmIOU: 0.876 | dT/rT: 1.186 / 4.497
+[32m[I 210419 11:48:44 train:123](B[m EN | E-I [57-4] | CE: 0.06394 | TrainmIOU: 0.927 | dT/rT: 1.376 / 4.495
+[32m[I 210419 11:48:50 train:123](B[m EN | E-I [58-4] | CE: 0.06130 | TrainmIOU: 0.928 | dT/rT: 1.178 / 4.494
+[32m[I 210419 11:48:56 train:123](B[m EN | E-I [59-4] | CE: 0.08785 | TrainmIOU: 0.881 | dT/rT: 1.175 / 4.498
+[32m[I 210419 11:49:01 train:123](B[m EN | E-I [60-4] | CE: 0.05783 | TrainmIOU: 0.933 | dT/rT: 1.360 / 4.497
+[32m[I 210419 11:49:01 train:129](B[m Dump weights experiments/lungseg-Epoch_00060.pth to disk...
+[32m[I 210419 11:49:01 train:139](B[m Do evaluation...
+[32m[I 210419 11:49:04 train:151](B[m VALIDATION | E [60] | CE: 0.06377 | ValmIOU: 0.931
+[32m[I 210419 11:49:10 train:123](B[m EN | E-I [61-4] | CE: 0.06180 | TrainmIOU: 0.919 | dT/rT: 1.371 / 4.496
+[32m[I 210419 11:49:15 train:123](B[m EN | E-I [62-4] | CE: 0.05751 | TrainmIOU: 0.922 | dT/rT: 1.324 / 4.498
+[32m[I 210419 11:49:21 train:123](B[m EN | E-I [63-4] | CE: 0.08990 | TrainmIOU: 0.877 | dT/rT: 1.375 / 4.498
+[32m[I 210419 11:49:27 train:123](B[m EN | E-I [64-4] | CE: 0.06544 | TrainmIOU: 0.899 | dT/rT: 1.184 / 4.498
+[32m[I 210419 11:49:33 train:123](B[m EN | E-I [65-4] | CE: 0.05493 | TrainmIOU: 0.927 | dT/rT: 1.161 / 4.495
+[32m[I 210419 11:49:38 train:123](B[m EN | E-I [66-4] | CE: 0.05377 | TrainmIOU: 0.926 | dT/rT: 1.247 / 4.499
+[32m[I 210419 11:49:44 train:123](B[m EN | E-I [67-4] | CE: 0.05238 | TrainmIOU: 0.928 | dT/rT: 1.278 / 4.498
+[32m[I 210419 11:49:50 train:123](B[m EN | E-I [68-4] | CE: 0.05056 | TrainmIOU: 0.932 | dT/rT: 1.155 / 4.499
+[32m[I 210419 11:49:55 train:123](B[m EN | E-I [69-4] | CE: 0.04823 | TrainmIOU: 0.936 | dT/rT: 1.169 / 4.498
+[32m[I 210419 11:50:01 train:123](B[m EN | E-I [70-4] | CE: 0.04808 | TrainmIOU: 0.935 | dT/rT: 1.265 / 4.497
+[32m[I 210419 11:50:01 train:129](B[m Dump weights experiments/lungseg-Epoch_00070.pth to disk...
+[32m[I 210419 11:50:01 train:139](B[m Do evaluation...
+[32m[I 210419 11:50:04 train:151](B[m VALIDATION | E [70] | CE: 0.04753 | ValmIOU: 0.947
+[32m[I 210419 11:50:09 train:123](B[m EN | E-I [71-4] | CE: 0.04467 | TrainmIOU: 0.944 | dT/rT: 1.399 / 4.496
+[32m[I 210419 11:50:15 train:123](B[m EN | E-I [72-4] | CE: 0.04704 | TrainmIOU: 0.938 | dT/rT: 1.364 / 4.499
+[32m[I 210419 11:50:21 train:123](B[m EN | E-I [73-4] | CE: 0.04594 | TrainmIOU: 0.939 | dT/rT: 1.207 / 4.498
+[32m[I 210419 11:50:27 train:123](B[m EN | E-I [74-4] | CE: 0.04565 | TrainmIOU: 0.938 | dT/rT: 1.358 / 4.501
+[32m[I 210419 11:50:33 train:123](B[m EN | E-I [75-4] | CE: 0.04451 | TrainmIOU: 0.936 | dT/rT: 1.295 / 4.498
+[32m[I 210419 11:50:38 train:123](B[m EN | E-I [76-4] | CE: 0.04414 | TrainmIOU: 0.939 | dT/rT: 1.248 / 4.501
+[32m[I 210419 11:50:44 train:123](B[m EN | E-I [77-4] | CE: 0.04331 | TrainmIOU: 0.939 | dT/rT: 1.326 / 4.502
+[32m[I 210419 11:50:50 train:123](B[m EN | E-I [78-4] | CE: 0.11986 | TrainmIOU: 0.821 | dT/rT: 1.191 / 4.499
+[32m[I 210419 11:50:56 train:123](B[m EN | E-I [79-4] | CE: 0.08097 | TrainmIOU: 0.874 | dT/rT: 1.267 / 4.495
+[32m[I 210419 11:51:02 train:123](B[m EN | E-I [80-4] | CE: 0.06134 | TrainmIOU: 0.905 | dT/rT: 1.370 / 4.497
+[32m[I 210419 11:51:02 train:129](B[m Dump weights experiments/lungseg-Epoch_00080.pth to disk...
+[32m[I 210419 11:51:02 train:139](B[m Do evaluation...
+[32m[I 210419 11:51:04 train:151](B[m VALIDATION | E [80] | CE: 0.07910 | ValmIOU: 0.865
+[32m[I 210419 11:51:10 train:123](B[m EN | E-I [81-4] | CE: 0.06855 | TrainmIOU: 0.909 | dT/rT: 1.375 / 4.493
+[32m[I 210419 11:51:15 train:123](B[m EN | E-I [82-4] | CE: 0.05856 | TrainmIOU: 0.912 | dT/rT: 1.246 / 4.499
+[32m[I 210419 11:51:21 train:123](B[m EN | E-I [83-4] | CE: 0.07847 | TrainmIOU: 0.878 | dT/rT: 1.337 / 4.498
+[32m[I 210419 11:51:27 train:123](B[m EN | E-I [84-4] | CE: 0.09529 | TrainmIOU: 0.831 | dT/rT: 1.273 / 4.497
+[32m[I 210419 11:51:33 train:123](B[m EN | E-I [85-4] | CE: 0.07042 | TrainmIOU: 0.870 | dT/rT: 1.245 / 4.503
+[32m[I 210419 11:51:39 train:123](B[m EN | E-I [86-4] | CE: 0.07276 | TrainmIOU: 0.878 | dT/rT: 1.251 / 4.496
+[32m[I 210419 11:51:44 train:123](B[m EN | E-I [87-4] | CE: 0.06281 | TrainmIOU: 0.908 | dT/rT: 1.353 / 4.496
+[32m[I 210419 11:51:50 train:123](B[m EN | E-I [88-4] | CE: 0.05134 | TrainmIOU: 0.924 | dT/rT: 1.307 / 4.494
+[32m[I 210419 11:51:56 train:123](B[m EN | E-I [89-4] | CE: 0.04475 | TrainmIOU: 0.927 | dT/rT: 1.345 / 4.497
+[32m[I 210419 11:52:02 train:123](B[m EN | E-I [90-4] | CE: 0.04252 | TrainmIOU: 0.933 | dT/rT: 1.330 / 4.496
+[32m[I 210419 11:52:02 train:129](B[m Dump weights experiments/lungseg-Epoch_00090.pth to disk...
+[32m[I 210419 11:52:02 train:139](B[m Do evaluation...
+[32m[I 210419 11:52:04 train:151](B[m VALIDATION | E [90] | CE: 0.05185 | ValmIOU: 0.925
+[32m[I 210419 11:52:10 train:123](B[m EN | E-I [91-4] | CE: 0.07615 | TrainmIOU: 0.882 | dT/rT: 1.295 / 4.493
+[32m[I 210419 11:52:16 train:123](B[m EN | E-I [92-4] | CE: 0.05031 | TrainmIOU: 0.913 | dT/rT: 1.315 / 4.496
+[32m[I 210419 11:52:21 train:123](B[m EN | E-I [93-4] | CE: 0.04857 | TrainmIOU: 0.917 | dT/rT: 1.164 / 4.494
+[32m[I 210419 11:52:27 train:123](B[m EN | E-I [94-4] | CE: 0.06072 | TrainmIOU: 0.896 | dT/rT: 1.363 / 4.495
+[32m[I 210419 11:52:33 train:123](B[m EN | E-I [95-4] | CE: 0.04768 | TrainmIOU: 0.924 | dT/rT: 1.213 / 4.495
+[32m[I 210419 11:52:39 train:123](B[m EN | E-I [96-4] | CE: 0.05958 | TrainmIOU: 0.899 | dT/rT: 1.200 / 4.500
+[32m[I 210419 11:52:44 train:123](B[m EN | E-I [97-4] | CE: 0.04455 | TrainmIOU: 0.929 | dT/rT: 1.360 / 4.501
+[32m[I 210419 11:52:50 train:123](B[m EN | E-I [98-4] | CE: 0.03850 | TrainmIOU: 0.947 | dT/rT: 1.250 / 4.489
+[32m[I 210419 11:52:56 train:123](B[m EN | E-I [99-4] | CE: 0.03923 | TrainmIOU: 0.936 | dT/rT: 1.153 / 4.510
+[32m[I 210419 11:53:02 train:123](B[m EN | E-I [100-4] | CE: 0.04038 | TrainmIOU: 0.935 | dT/rT: 1.390 / 4.498
+[32m[I 210419 11:53:02 train:129](B[m Dump weights experiments/lungseg-Epoch_00100.pth to disk...
+[32m[I 210419 11:53:02 train:139](B[m Do evaluation...
+[32m[I 210419 11:53:04 train:151](B[m VALIDATION | E [100] | CE: 0.07672 | ValmIOU: 0.822
+[32m[I 210419 11:53:10 train:123](B[m EN | E-I [101-4] | CE: 0.04188 | TrainmIOU: 0.935 | dT/rT: 1.269 / 4.516
+[32m[I 210419 11:53:16 train:123](B[m EN | E-I [102-4] | CE: 0.03932 | TrainmIOU: 0.938 | dT/rT: 1.181 / 4.496
+[32m[I 210419 11:53:21 train:123](B[m EN | E-I [103-4] | CE: 0.05378 | TrainmIOU: 0.917 | dT/rT: 1.332 / 4.494
+[32m[I 210419 11:53:27 train:123](B[m EN | E-I [104-4] | CE: 0.04074 | TrainmIOU: 0.928 | dT/rT: 1.160 / 4.498
+[32m[I 210419 11:53:33 train:123](B[m EN | E-I [105-4] | CE: 0.05863 | TrainmIOU: 0.908 | dT/rT: 1.239 / 4.498
+[32m[I 210419 11:53:39 train:123](B[m EN | E-I [106-4] | CE: 0.03903 | TrainmIOU: 0.934 | dT/rT: 1.327 / 4.499
+[32m[I 210419 11:53:44 train:123](B[m EN | E-I [107-4] | CE: 0.04856 | TrainmIOU: 0.923 | dT/rT: 1.245 / 4.500
+[32m[I 210419 11:53:50 train:123](B[m EN | E-I [108-4] | CE: 0.05311 | TrainmIOU: 0.911 | dT/rT: 1.218 / 4.499
+[32m[I 210419 11:53:56 train:123](B[m EN | E-I [109-4] | CE: 0.04304 | TrainmIOU: 0.930 | dT/rT: 1.371 / 4.494
+[32m[I 210419 11:54:02 train:123](B[m EN | E-I [110-4] | CE: 0.03509 | TrainmIOU: 0.945 | dT/rT: 1.256 / 4.491
+[32m[I 210419 11:54:02 train:129](B[m Dump weights experiments/lungseg-Epoch_00110.pth to disk...
+[32m[I 210419 11:54:02 train:139](B[m Do evaluation...
+[32m[I 210419 11:54:04 train:151](B[m VALIDATION | E [110] | CE: 0.25193 | ValmIOU: 0.683
+[32m[I 210419 11:54:10 train:123](B[m EN | E-I [111-4] | CE: 0.03577 | TrainmIOU: 0.942 | dT/rT: 1.379 / 4.510
+[32m[I 210419 11:54:16 train:123](B[m EN | E-I [112-4] | CE: 0.03904 | TrainmIOU: 0.933 | dT/rT: 1.311 / 4.494
+[32m[I 210419 11:54:21 train:123](B[m EN | E-I [113-4] | CE: 0.04186 | TrainmIOU: 0.924 | dT/rT: 1.295 / 4.497
+[32m[I 210419 11:54:27 train:123](B[m EN | E-I [114-4] | CE: 0.10213 | TrainmIOU: 0.827 | dT/rT: 1.204 / 4.491
+[32m[I 210419 11:54:33 train:123](B[m EN | E-I [115-4] | CE: 0.05858 | TrainmIOU: 0.892 | dT/rT: 1.354 / 4.495
+[32m[I 210419 11:54:39 train:123](B[m EN | E-I [116-4] | CE: 0.04891 | TrainmIOU: 0.918 | dT/rT: 1.255 / 4.499
+[32m[I 210419 11:54:45 train:123](B[m EN | E-I [117-4] | CE: 0.04250 | TrainmIOU: 0.932 | dT/rT: 1.360 / 4.495
+[32m[I 210419 11:54:50 train:123](B[m EN | E-I [118-4] | CE: 0.04267 | TrainmIOU: 0.920 | dT/rT: 1.179 / 4.494
+[32m[I 210419 11:54:56 train:123](B[m EN | E-I [119-4] | CE: 0.04041 | TrainmIOU: 0.927 | dT/rT: 1.362 / 4.494
+[32m[I 210419 11:55:02 train:123](B[m EN | E-I [120-4] | CE: 0.03878 | TrainmIOU: 0.940 | dT/rT: 1.328 / 4.498
+[32m[I 210419 11:55:02 train:129](B[m Dump weights experiments/lungseg-Epoch_00120.pth to disk...
+[32m[I 210419 11:55:02 train:139](B[m Do evaluation...
+[32m[I 210419 11:55:04 train:151](B[m VALIDATION | E [120] | CE: 0.08336 | ValmIOU: 0.795
+[32m[I 210419 11:55:10 train:123](B[m EN | E-I [121-4] | CE: 0.03385 | TrainmIOU: 0.942 | dT/rT: 1.195 / 4.497
+[32m[I 210419 11:55:16 train:123](B[m EN | E-I [122-4] | CE: 0.05498 | TrainmIOU: 0.918 | dT/rT: 1.242 / 4.495
+[32m[I 210419 11:55:22 train:123](B[m EN | E-I [123-4] | CE: 0.03414 | TrainmIOU: 0.942 | dT/rT: 1.298 / 4.494
+[32m[I 210419 11:55:27 train:123](B[m EN | E-I [124-4] | CE: 0.03513 | TrainmIOU: 0.941 | dT/rT: 1.281 / 4.500
+[32m[I 210419 11:55:33 train:123](B[m EN | E-I [125-4] | CE: 0.03459 | TrainmIOU: 0.939 | dT/rT: 1.390 / 4.499
+[32m[I 210419 11:55:39 train:123](B[m EN | E-I [126-4] | CE: 0.03346 | TrainmIOU: 0.946 | dT/rT: 1.284 / 4.498
+[32m[I 210419 11:55:45 train:123](B[m EN | E-I [127-4] | CE: 0.05268 | TrainmIOU: 0.912 | dT/rT: 1.259 / 4.496
+[32m[I 210419 11:55:51 train:123](B[m EN | E-I [128-4] | CE: 0.03585 | TrainmIOU: 0.936 | dT/rT: 1.260 / 4.501
+[32m[I 210419 11:55:56 train:123](B[m EN | E-I [129-4] | CE: 0.03337 | TrainmIOU: 0.943 | dT/rT: 1.243 / 4.494
+[32m[I 210419 11:56:02 train:123](B[m EN | E-I [130-4] | CE: 0.03661 | TrainmIOU: 0.940 | dT/rT: 1.303 / 4.496
+[32m[I 210419 11:56:02 train:129](B[m Dump weights experiments/lungseg-Epoch_00130.pth to disk...
+[32m[I 210419 11:56:02 train:139](B[m Do evaluation...
+[32m[I 210419 11:56:04 train:151](B[m VALIDATION | E [130] | CE: 0.13720 | ValmIOU: 0.804
+[32m[I 210419 11:56:10 train:123](B[m EN | E-I [131-4] | CE: 0.03306 | TrainmIOU: 0.948 | dT/rT: 1.330 / 4.499
+[32m[I 210419 11:56:16 train:123](B[m EN | E-I [132-4] | CE: 0.03634 | TrainmIOU: 0.940 | dT/rT: 1.174 / 4.499
+[32m[I 210419 11:56:22 train:123](B[m EN | E-I [133-4] | CE: 0.03663 | TrainmIOU: 0.939 | dT/rT: 1.257 / 4.496
+[32m[I 210419 11:56:27 train:123](B[m EN | E-I [134-4] | CE: 0.03134 | TrainmIOU: 0.945 | dT/rT: 1.306 / 4.498
+[32m[I 210419 11:56:33 train:123](B[m EN | E-I [135-4] | CE: 0.03092 | TrainmIOU: 0.951 | dT/rT: 1.269 / 4.498
+[32m[I 210419 11:56:39 train:123](B[m EN | E-I [136-4] | CE: 0.02757 | TrainmIOU: 0.954 | dT/rT: 1.365 / 4.498
+[32m[I 210419 11:56:45 train:123](B[m EN | E-I [137-4] | CE: 0.03250 | TrainmIOU: 0.944 | dT/rT: 1.235 / 4.496
+[32m[I 210419 11:56:51 train:123](B[m EN | E-I [138-4] | CE: 0.03776 | TrainmIOU: 0.934 | dT/rT: 1.383 / 4.499
+[32m[I 210419 11:56:56 train:123](B[m EN | E-I [139-4] | CE: 0.11176 | TrainmIOU: 0.821 | dT/rT: 1.319 / 4.496
+[32m[I 210419 11:57:02 train:123](B[m EN | E-I [140-4] | CE: 0.04538 | TrainmIOU: 0.926 | dT/rT: 1.198 / 4.498
+[32m[I 210419 11:57:02 train:129](B[m Dump weights experiments/lungseg-Epoch_00140.pth to disk...
+[32m[I 210419 11:57:02 train:139](B[m Do evaluation...
+[32m[I 210419 11:57:05 train:151](B[m VALIDATION | E [140] | CE: 0.23329 | ValmIOU: 0.758
+[32m[I 210419 11:57:10 train:123](B[m EN | E-I [141-4] | CE: 0.04615 | TrainmIOU: 0.910 | dT/rT: 1.335 / 4.506
+[32m[I 210419 11:57:16 train:123](B[m EN | E-I [142-4] | CE: 0.03183 | TrainmIOU: 0.945 | dT/rT: 1.296 / 4.496
+[32m[I 210419 11:57:22 train:123](B[m EN | E-I [143-4] | CE: 0.03108 | TrainmIOU: 0.949 | dT/rT: 1.187 / 4.501
+[32m[I 210419 11:57:28 train:123](B[m EN | E-I [144-4] | CE: 0.03172 | TrainmIOU: 0.946 | dT/rT: 1.373 / 4.497
+[32m[I 210419 11:57:34 train:123](B[m EN | E-I [145-4] | CE: 0.02784 | TrainmIOU: 0.950 | dT/rT: 1.297 / 4.497
+[32m[I 210419 11:57:39 train:123](B[m EN | E-I [146-4] | CE: 0.02753 | TrainmIOU: 0.955 | dT/rT: 1.172 / 4.498
+[32m[I 210419 11:57:45 train:123](B[m EN | E-I [147-4] | CE: 0.02711 | TrainmIOU: 0.957 | dT/rT: 1.157 / 4.497
+[32m[I 210419 11:57:51 train:123](B[m EN | E-I [148-4] | CE: 0.03459 | TrainmIOU: 0.941 | dT/rT: 1.309 / 4.498
+[32m[I 210419 11:57:57 train:123](B[m EN | E-I [149-4] | CE: 0.04164 | TrainmIOU: 0.920 | dT/rT: 1.355 / 4.498
+[32m[I 210419 11:58:02 train:123](B[m EN | E-I [150-4] | CE: 0.02839 | TrainmIOU: 0.955 | dT/rT: 1.296 / 4.496
+[32m[I 210419 11:58:02 train:129](B[m Dump weights experiments/lungseg-Epoch_00150.pth to disk...
+[32m[I 210419 11:58:02 train:139](B[m Do evaluation...
+[32m[I 210419 11:58:05 train:151](B[m VALIDATION | E [150] | CE: 0.02950 | ValmIOU: 0.940
+[32m[I 210419 11:58:10 train:123](B[m EN | E-I [151-4] | CE: 0.02816 | TrainmIOU: 0.954 | dT/rT: 1.162 / 4.497
+[32m[I 210419 11:58:16 train:123](B[m EN | E-I [152-4] | CE: 0.02876 | TrainmIOU: 0.949 | dT/rT: 1.227 / 4.499
+[32m[I 210419 11:58:22 train:123](B[m EN | E-I [153-4] | CE: 0.02660 | TrainmIOU: 0.956 | dT/rT: 1.356 / 4.495
+[32m[I 210419 11:58:28 train:123](B[m EN | E-I [154-4] | CE: 0.02462 | TrainmIOU: 0.961 | dT/rT: 1.178 / 4.499
+[32m[I 210419 11:58:33 train:123](B[m EN | E-I [155-4] | CE: 0.03194 | TrainmIOU: 0.942 | dT/rT: 1.253 / 4.498
+[32m[I 210419 11:58:39 train:123](B[m EN | E-I [156-4] | CE: 0.02793 | TrainmIOU: 0.954 | dT/rT: 1.373 / 4.512
+[32m[I 210419 11:58:45 train:123](B[m EN | E-I [157-4] | CE: 0.05162 | TrainmIOU: 0.919 | dT/rT: 1.151 / 4.500
+[32m[I 210419 11:58:51 train:123](B[m EN | E-I [158-4] | CE: 0.03504 | TrainmIOU: 0.936 | dT/rT: 1.229 / 4.499
+[32m[I 210419 11:58:56 train:123](B[m EN | E-I [159-4] | CE: 0.02927 | TrainmIOU: 0.944 | dT/rT: 1.159 / 4.497
+[32m[I 210419 11:59:02 train:123](B[m EN | E-I [160-4] | CE: 0.04299 | TrainmIOU: 0.929 | dT/rT: 1.267 / 4.503
+[32m[I 210419 11:59:02 train:129](B[m Dump weights experiments/lungseg-Epoch_00160.pth to disk...
+[32m[I 210419 11:59:02 train:139](B[m Do evaluation...
+[32m[I 210419 11:59:04 train:151](B[m VALIDATION | E [160] | CE: 0.10683 | ValmIOU: 0.731
+[32m[I 210419 11:59:10 train:123](B[m EN | E-I [161-4] | CE: 0.02940 | TrainmIOU: 0.946 | dT/rT: 1.228 / 4.511
+[32m[I 210419 11:59:16 train:123](B[m EN | E-I [162-4] | CE: 0.03651 | TrainmIOU: 0.936 | dT/rT: 1.333 / 4.496
+[32m[I 210419 11:59:22 train:123](B[m EN | E-I [163-4] | CE: 0.02897 | TrainmIOU: 0.957 | dT/rT: 1.331 / 4.498
+[32m[I 210419 11:59:27 train:123](B[m EN | E-I [164-4] | CE: 0.03240 | TrainmIOU: 0.942 | dT/rT: 1.301 / 4.496
+[32m[I 210419 11:59:33 train:123](B[m EN | E-I [165-4] | CE: 0.03504 | TrainmIOU: 0.935 | dT/rT: 1.178 / 4.499
+[32m[I 210419 11:59:39 train:123](B[m EN | E-I [166-4] | CE: 0.02651 | TrainmIOU: 0.952 | dT/rT: 1.380 / 4.497
+[32m[I 210419 11:59:45 train:123](B[m EN | E-I [167-4] | CE: 0.06533 | TrainmIOU: 0.875 | dT/rT: 1.253 / 4.498
+[32m[I 210419 11:59:51 train:123](B[m EN | E-I [168-4] | CE: 0.05313 | TrainmIOU: 0.903 | dT/rT: 1.240 / 4.501
+[32m[I 210419 11:59:56 train:123](B[m EN | E-I [169-4] | CE: 0.06639 | TrainmIOU: 0.887 | dT/rT: 1.251 / 4.496
+[32m[I 210419 12:00:02 train:123](B[m EN | E-I [170-4] | CE: 0.03807 | TrainmIOU: 0.927 | dT/rT: 1.355 / 4.496
+[32m[I 210419 12:00:02 train:129](B[m Dump weights experiments/lungseg-Epoch_00170.pth to disk...
+[32m[I 210419 12:00:02 train:139](B[m Do evaluation...
+[32m[I 210419 12:00:04 train:151](B[m VALIDATION | E [170] | CE: 0.45419 | ValmIOU: 0.265
+[32m[I 210419 12:00:10 train:123](B[m EN | E-I [171-4] | CE: 0.03120 | TrainmIOU: 0.939 | dT/rT: 1.384 / 4.510
+[32m[I 210419 12:00:16 train:123](B[m EN | E-I [172-4] | CE: 0.03439 | TrainmIOU: 0.934 | dT/rT: 1.362 / 4.513
+[32m[I 210419 12:00:22 train:123](B[m EN | E-I [173-4] | CE: 0.08741 | TrainmIOU: 0.867 | dT/rT: 1.285 / 4.517
+[32m[I 210419 12:00:28 train:123](B[m EN | E-I [174-4] | CE: 0.07073 | TrainmIOU: 0.872 | dT/rT: 1.265 / 4.495
+[32m[I 210419 12:00:34 train:123](B[m EN | E-I [175-4] | CE: 0.04328 | TrainmIOU: 0.921 | dT/rT: 1.316 / 4.497
+[32m[I 210419 12:00:39 train:123](B[m EN | E-I [176-4] | CE: 0.03447 | TrainmIOU: 0.940 | dT/rT: 1.259 / 4.497
+[32m[I 210419 12:00:45 train:123](B[m EN | E-I [177-4] | CE: 0.03470 | TrainmIOU: 0.935 | dT/rT: 1.265 / 4.497
+[32m[I 210419 12:00:51 train:123](B[m EN | E-I [178-4] | CE: 0.03593 | TrainmIOU: 0.940 | dT/rT: 1.360 / 4.501
+[32m[I 210419 12:00:57 train:123](B[m EN | E-I [179-4] | CE: 0.02986 | TrainmIOU: 0.946 | dT/rT: 1.333 / 4.502
+[32m[I 210419 12:01:03 train:123](B[m EN | E-I [180-4] | CE: 0.03349 | TrainmIOU: 0.931 | dT/rT: 1.383 / 4.498
+[32m[I 210419 12:01:03 train:129](B[m Dump weights experiments/lungseg-Epoch_00180.pth to disk...
+[32m[I 210419 12:01:03 train:139](B[m Do evaluation...
+[32m[I 210419 12:01:05 train:151](B[m VALIDATION | E [180] | CE: 0.07281 | ValmIOU: 0.819
+[32m[I 210419 12:01:11 train:123](B[m EN | E-I [181-4] | CE: 0.03031 | TrainmIOU: 0.946 | dT/rT: 1.364 / 4.493
+[32m[I 210419 12:01:17 train:123](B[m EN | E-I [182-4] | CE: 0.02729 | TrainmIOU: 0.953 | dT/rT: 1.252 / 4.498
+[32m[I 210419 12:01:22 train:123](B[m EN | E-I [183-4] | CE: 0.02972 | TrainmIOU: 0.943 | dT/rT: 1.195 / 4.499
+[32m[I 210419 12:01:28 train:123](B[m EN | E-I [184-4] | CE: 0.03074 | TrainmIOU: 0.940 | dT/rT: 1.258 / 4.493
+[32m[I 210419 12:01:34 train:123](B[m EN | E-I [185-4] | CE: 0.02688 | TrainmIOU: 0.950 | dT/rT: 1.217 / 4.493
+[32m[I 210419 12:01:39 train:123](B[m EN | E-I [186-4] | CE: 0.02813 | TrainmIOU: 0.949 | dT/rT: 1.162 / 4.497
+[32m[I 210419 12:01:45 train:123](B[m EN | E-I [187-4] | CE: 0.05342 | TrainmIOU: 0.910 | dT/rT: 1.154 / 4.498
+[32m[I 210419 12:01:51 train:123](B[m EN | E-I [188-4] | CE: 0.02478 | TrainmIOU: 0.955 | dT/rT: 1.188 / 4.500
+[32m[I 210419 12:01:56 train:123](B[m EN | E-I [189-4] | CE: 0.02311 | TrainmIOU: 0.959 | dT/rT: 1.193 / 4.495
+[32m[I 210419 12:02:02 train:123](B[m EN | E-I [190-4] | CE: 0.03282 | TrainmIOU: 0.936 | dT/rT: 1.267 / 4.494
+[32m[I 210419 12:02:02 train:129](B[m Dump weights experiments/lungseg-Epoch_00190.pth to disk...
+[32m[I 210419 12:02:02 train:139](B[m Do evaluation...
+[32m[I 210419 12:02:04 train:151](B[m VALIDATION | E [190] | CE: 0.70159 | ValmIOU: 0.193
+[32m[I 210419 12:02:10 train:123](B[m EN | E-I [191-4] | CE: 0.02491 | TrainmIOU: 0.956 | dT/rT: 1.267 / 4.499
+[32m[I 210419 12:02:16 train:123](B[m EN | E-I [192-4] | CE: 0.02610 | TrainmIOU: 0.956 | dT/rT: 1.225 / 4.499
+[32m[I 210419 12:02:22 train:123](B[m EN | E-I [193-4] | CE: 0.03374 | TrainmIOU: 0.933 | dT/rT: 1.346 / 4.493
+[32m[I 210419 12:02:27 train:123](B[m EN | E-I [194-4] | CE: 0.02538 | TrainmIOU: 0.957 | dT/rT: 1.187 / 4.496
+[32m[I 210419 12:02:33 train:123](B[m EN | E-I [195-4] | CE: 0.02489 | TrainmIOU: 0.956 | dT/rT: 1.354 / 4.497
+[32m[I 210419 12:02:39 train:123](B[m EN | E-I [196-4] | CE: 0.03230 | TrainmIOU: 0.943 | dT/rT: 1.249 / 4.497
+[32m[I 210419 12:02:45 train:123](B[m EN | E-I [197-4] | CE: 0.03017 | TrainmIOU: 0.946 | dT/rT: 1.355 / 4.500
+[32m[I 210419 12:02:51 train:123](B[m EN | E-I [198-4] | CE: 0.02579 | TrainmIOU: 0.953 | dT/rT: 1.248 / 4.497
+[32m[I 210419 12:02:56 train:123](B[m EN | E-I [199-4] | CE: 0.06050 | TrainmIOU: 0.892 | dT/rT: 1.159 / 4.515
+[32m[I 210419 12:03:02 train:123](B[m EN | E-I [200-4] | CE: 0.02722 | TrainmIOU: 0.945 | dT/rT: 1.387 / 4.511
+[32m[I 210419 12:03:02 train:129](B[m Dump weights experiments/lungseg-Epoch_00200.pth to disk...
+[32m[I 210419 12:03:02 train:139](B[m Do evaluation...
+[32m[I 210419 12:03:05 train:151](B[m VALIDATION | E [200] | CE: 1.15266 | ValmIOU: 0.148
+[32m[I 210419 12:03:10 train:123](B[m EN | E-I [201-4] | CE: 0.05305 | TrainmIOU: 0.917 | dT/rT: 1.330 / 4.497
+[32m[I 210419 12:03:16 train:123](B[m EN | E-I [202-4] | CE: 0.02816 | TrainmIOU: 0.951 | dT/rT: 1.240 / 4.500
+[32m[I 210419 12:03:22 train:123](B[m EN | E-I [203-4] | CE: 0.02576 | TrainmIOU: 0.952 | dT/rT: 1.207 / 4.496
+[32m[I 210419 12:03:28 train:123](B[m EN | E-I [204-4] | CE: 0.02819 | TrainmIOU: 0.949 | dT/rT: 1.244 / 4.497
+[32m[I 210419 12:03:33 train:123](B[m EN | E-I [205-4] | CE: 0.04430 | TrainmIOU: 0.924 | dT/rT: 1.389 / 4.514
+[32m[I 210419 12:03:39 train:123](B[m EN | E-I [206-4] | CE: 0.03102 | TrainmIOU: 0.942 | dT/rT: 1.345 / 4.497
+[32m[I 210419 12:03:45 train:123](B[m EN | E-I [207-4] | CE: 0.02409 | TrainmIOU: 0.955 | dT/rT: 1.245 / 4.497
+[32m[I 210419 12:03:51 train:123](B[m EN | E-I [208-4] | CE: 0.03172 | TrainmIOU: 0.939 | dT/rT: 1.309 / 4.494
+[32m[I 210419 12:03:57 train:123](B[m EN | E-I [209-4] | CE: 0.03495 | TrainmIOU: 0.929 | dT/rT: 1.374 / 4.497
+[32m[I 210419 12:04:02 train:123](B[m EN | E-I [210-4] | CE: 0.04015 | TrainmIOU: 0.921 | dT/rT: 1.239 / 4.497
+[32m[I 210419 12:04:02 train:129](B[m Dump weights experiments/lungseg-Epoch_00210.pth to disk...
+[32m[I 210419 12:04:02 train:139](B[m Do evaluation...
+[32m[I 210419 12:04:05 train:151](B[m VALIDATION | E [210] | CE: 0.83276 | ValmIOU: 0.612
+[32m[I 210419 12:04:11 train:123](B[m EN | E-I [211-4] | CE: 0.06534 | TrainmIOU: 0.880 | dT/rT: 1.411 / 4.498
+[32m[I 210419 12:04:16 train:123](B[m EN | E-I [212-4] | CE: 0.03940 | TrainmIOU: 0.928 | dT/rT: 1.177 / 4.497
+[32m[I 210419 12:04:22 train:123](B[m EN | E-I [213-4] | CE: 0.05302 | TrainmIOU: 0.905 | dT/rT: 1.268 / 4.497
+[32m[I 210419 12:04:28 train:123](B[m EN | E-I [214-4] | CE: 0.04650 | TrainmIOU: 0.917 | dT/rT: 1.321 / 4.499
+[32m[I 210419 12:04:34 train:123](B[m EN | E-I [215-4] | CE: 0.03171 | TrainmIOU: 0.937 | dT/rT: 1.232 / 4.503
+[32m[I 210419 12:04:39 train:123](B[m EN | E-I [216-4] | CE: 0.07273 | TrainmIOU: 0.859 | dT/rT: 1.192 / 4.497
+[32m[I 210419 12:04:45 train:123](B[m EN | E-I [217-4] | CE: 0.03454 | TrainmIOU: 0.936 | dT/rT: 1.294 / 4.500
+[32m[I 210419 12:04:51 train:123](B[m EN | E-I [218-4] | CE: 0.03316 | TrainmIOU: 0.931 | dT/rT: 1.300 / 4.489
+[32m[I 210419 12:04:57 train:123](B[m EN | E-I [219-4] | CE: 0.02916 | TrainmIOU: 0.946 | dT/rT: 1.381 / 4.509
+[32m[I 210419 12:05:03 train:123](B[m EN | E-I [220-4] | CE: 0.02785 | TrainmIOU: 0.949 | dT/rT: 1.293 / 4.516
+[32m[I 210419 12:05:03 train:129](B[m Dump weights experiments/lungseg-Epoch_00220.pth to disk...
+[32m[I 210419 12:05:03 train:139](B[m Do evaluation...
+[32m[I 210419 12:05:05 train:151](B[m VALIDATION | E [220] | CE: 0.25899 | ValmIOU: 0.720
+[32m[I 210419 12:05:11 train:123](B[m EN | E-I [221-4] | CE: 0.03563 | TrainmIOU: 0.936 | dT/rT: 1.276 / 4.499
+[32m[I 210419 12:05:17 train:123](B[m EN | E-I [222-4] | CE: 0.02811 | TrainmIOU: 0.950 | dT/rT: 1.289 / 4.494
+[32m[I 210419 12:05:22 train:123](B[m EN | E-I [223-4] | CE: 0.03718 | TrainmIOU: 0.938 | dT/rT: 1.278 / 4.499
+[32m[I 210419 12:05:28 train:123](B[m EN | E-I [224-4] | CE: 0.02265 | TrainmIOU: 0.964 | dT/rT: 1.219 / 4.495
+[32m[I 210419 12:05:34 train:123](B[m EN | E-I [225-4] | CE: 0.03045 | TrainmIOU: 0.936 | dT/rT: 1.387 / 4.496
+[32m[I 210419 12:05:40 train:123](B[m EN | E-I [226-4] | CE: 0.02428 | TrainmIOU: 0.954 | dT/rT: 1.301 / 4.497
+[32m[I 210419 12:05:46 train:123](B[m EN | E-I [227-4] | CE: 0.03426 | TrainmIOU: 0.936 | dT/rT: 1.224 / 4.496
+[32m[I 210419 12:05:51 train:123](B[m EN | E-I [228-4] | CE: 0.02228 | TrainmIOU: 0.957 | dT/rT: 1.245 / 4.497
+[32m[I 210419 12:05:57 train:123](B[m EN | E-I [229-4] | CE: 0.02789 | TrainmIOU: 0.949 | dT/rT: 1.258 / 4.499
+[32m[I 210419 12:06:03 train:123](B[m EN | E-I [230-4] | CE: 0.02539 | TrainmIOU: 0.950 | dT/rT: 1.195 / 4.498
+[32m[I 210419 12:06:03 train:129](B[m Dump weights experiments/lungseg-Epoch_00230.pth to disk...
+[32m[I 210419 12:06:03 train:139](B[m Do evaluation...
+[32m[I 210419 12:06:05 train:151](B[m VALIDATION | E [230] | CE: 0.02167 | ValmIOU: 0.965
+[32m[I 210419 12:06:11 train:123](B[m EN | E-I [231-4] | CE: 0.04062 | TrainmIOU: 0.935 | dT/rT: 1.256 / 4.497
+[32m[I 210419 12:06:17 train:123](B[m EN | E-I [232-4] | CE: 0.02407 | TrainmIOU: 0.955 | dT/rT: 1.238 / 4.499
+[32m[I 210419 12:06:22 train:123](B[m EN | E-I [233-4] | CE: 0.04268 | TrainmIOU: 0.933 | dT/rT: 1.238 / 4.493
+[32m[I 210419 12:06:28 train:123](B[m EN | E-I [234-4] | CE: 0.04179 | TrainmIOU: 0.924 | dT/rT: 1.326 / 4.499
+[32m[I 210419 12:06:34 train:123](B[m EN | E-I [235-4] | CE: 0.02653 | TrainmIOU: 0.947 | dT/rT: 1.255 / 4.497
+[32m[I 210419 12:06:40 train:123](B[m EN | E-I [236-4] | CE: 0.02911 | TrainmIOU: 0.947 | dT/rT: 1.384 / 4.499
+[32m[I 210419 12:06:46 train:123](B[m EN | E-I [237-4] | CE: 0.03479 | TrainmIOU: 0.943 | dT/rT: 1.291 / 4.500
+[32m[I 210419 12:06:51 train:123](B[m EN | E-I [238-4] | CE: 0.02080 | TrainmIOU: 0.962 | dT/rT: 1.175 / 4.493
+[32m[I 210419 12:06:57 train:123](B[m EN | E-I [239-4] | CE: 0.02368 | TrainmIOU: 0.957 | dT/rT: 1.238 / 4.500
+[32m[I 210419 12:07:03 train:123](B[m EN | E-I [240-4] | CE: 0.02560 | TrainmIOU: 0.949 | dT/rT: 1.176 / 4.495
+[32m[I 210419 12:07:03 train:129](B[m Dump weights experiments/lungseg-Epoch_00240.pth to disk...
+[32m[I 210419 12:07:03 train:139](B[m Do evaluation...
+[32m[I 210419 12:07:05 train:151](B[m VALIDATION | E [240] | CE: 0.57397 | ValmIOU: 0.625
+[32m[I 210419 12:07:11 train:123](B[m EN | E-I [241-4] | CE: 0.02189 | TrainmIOU: 0.960 | dT/rT: 1.262 / 4.495
+[32m[I 210419 12:07:16 train:123](B[m EN | E-I [242-4] | CE: 0.01956 | TrainmIOU: 0.965 | dT/rT: 1.392 / 4.500
+[32m[I 210419 12:07:22 train:123](B[m EN | E-I [243-4] | CE: 0.02442 | TrainmIOU: 0.956 | dT/rT: 1.316 / 4.498
+[32m[I 210419 12:07:28 train:123](B[m EN | E-I [244-4] | CE: 0.03327 | TrainmIOU: 0.942 | dT/rT: 1.297 / 4.497
+[32m[I 210419 12:07:34 train:123](B[m EN | E-I [245-4] | CE: 0.03485 | TrainmIOU: 0.937 | dT/rT: 1.310 / 4.499
+[32m[I 210419 12:07:40 train:123](B[m EN | E-I [246-4] | CE: 0.03287 | TrainmIOU: 0.938 | dT/rT: 1.356 / 4.497
+[32m[I 210419 12:07:46 train:123](B[m EN | E-I [247-4] | CE: 0.03041 | TrainmIOU: 0.943 | dT/rT: 1.311 / 4.495
+[32m[I 210419 12:07:51 train:123](B[m EN | E-I [248-4] | CE: 0.03047 | TrainmIOU: 0.939 | dT/rT: 1.265 / 4.495
+[32m[I 210419 12:07:57 train:123](B[m EN | E-I [249-4] | CE: 0.03082 | TrainmIOU: 0.943 | dT/rT: 1.369 / 4.500
+[32m[I 210419 12:08:03 train:123](B[m EN | E-I [250-4] | CE: 0.02794 | TrainmIOU: 0.943 | dT/rT: 1.252 / 4.500
+[32m[I 210419 12:08:03 train:129](B[m Dump weights experiments/lungseg-Epoch_00250.pth to disk...
+[32m[I 210419 12:08:03 train:139](B[m Do evaluation...
+[32m[I 210419 12:08:05 train:151](B[m VALIDATION | E [250] | CE: 0.02829 | ValmIOU: 0.935
+[32m[I 210419 12:08:11 train:123](B[m EN | E-I [251-4] | CE: 0.02220 | TrainmIOU: 0.957 | dT/rT: 1.268 / 4.513
+[32m[I 210419 12:08:17 train:123](B[m EN | E-I [252-4] | CE: 0.03396 | TrainmIOU: 0.933 | dT/rT: 1.260 / 4.515
+[32m[I 210419 12:08:23 train:123](B[m EN | E-I [253-4] | CE: 0.03950 | TrainmIOU: 0.931 | dT/rT: 1.398 / 4.513
+[32m[I 210419 12:08:29 train:123](B[m EN | E-I [254-4] | CE: 0.02206 | TrainmIOU: 0.960 | dT/rT: 1.328 / 4.513
+[32m[I 210419 12:08:34 train:123](B[m EN | E-I [255-4] | CE: 0.02057 | TrainmIOU: 0.961 | dT/rT: 1.197 / 4.514
+[32m[I 210419 12:08:40 train:123](B[m EN | E-I [256-4] | CE: 0.02165 | TrainmIOU: 0.958 | dT/rT: 1.243 / 4.516
+[32m[I 210419 12:08:46 train:123](B[m EN | E-I [257-4] | CE: 0.01921 | TrainmIOU: 0.971 | dT/rT: 1.188 / 4.513
+[32m[I 210419 12:08:52 train:123](B[m EN | E-I [258-4] | CE: 0.02298 | TrainmIOU: 0.957 | dT/rT: 1.303 / 4.514
+[32m[I 210419 12:08:57 train:123](B[m EN | E-I [259-4] | CE: 0.01942 | TrainmIOU: 0.964 | dT/rT: 1.279 / 4.511
+[32m[I 210419 12:09:03 train:123](B[m EN | E-I [260-4] | CE: 0.03645 | TrainmIOU: 0.933 | dT/rT: 1.263 / 4.510
+[32m[I 210419 12:09:03 train:129](B[m Dump weights experiments/lungseg-Epoch_00260.pth to disk...
+[32m[I 210419 12:09:03 train:139](B[m Do evaluation...
+[32m[I 210419 12:09:05 train:151](B[m VALIDATION | E [260] | CE: 0.92628 | ValmIOU: 0.173
+[32m[I 210419 12:09:11 train:123](B[m EN | E-I [261-4] | CE: 0.02335 | TrainmIOU: 0.952 | dT/rT: 1.380 / 4.506
+[32m[I 210419 12:09:17 train:123](B[m EN | E-I [262-4] | CE: 0.03755 | TrainmIOU: 0.927 | dT/rT: 1.346 / 4.498
+[32m[I 210419 12:09:23 train:123](B[m EN | E-I [263-4] | CE: 0.02700 | TrainmIOU: 0.945 | dT/rT: 1.308 / 4.499
+[32m[I 210419 12:09:29 train:123](B[m EN | E-I [264-4] | CE: 0.02745 | TrainmIOU: 0.951 | dT/rT: 1.266 / 4.495
+[32m[I 210419 12:09:34 train:123](B[m EN | E-I [265-4] | CE: 0.04381 | TrainmIOU: 0.915 | dT/rT: 1.259 / 4.494
+[32m[I 210419 12:09:40 train:123](B[m EN | E-I [266-4] | CE: 0.02600 | TrainmIOU: 0.950 | dT/rT: 1.242 / 4.497
+[32m[I 210419 12:09:46 train:123](B[m EN | E-I [267-4] | CE: 0.02496 | TrainmIOU: 0.950 | dT/rT: 1.270 / 4.497
+[32m[I 210419 12:09:52 train:123](B[m EN | E-I [268-4] | CE: 0.03115 | TrainmIOU: 0.933 | dT/rT: 1.349 / 4.496
+[32m[I 210419 12:09:58 train:123](B[m EN | E-I [269-4] | CE: 0.02974 | TrainmIOU: 0.937 | dT/rT: 1.264 / 4.496
+[32m[I 210419 12:10:03 train:123](B[m EN | E-I [270-4] | CE: 0.02608 | TrainmIOU: 0.950 | dT/rT: 1.321 / 4.497
+[32m[I 210419 12:10:03 train:129](B[m Dump weights experiments/lungseg-Epoch_00270.pth to disk...
+[32m[I 210419 12:10:03 train:139](B[m Do evaluation...
+[32m[I 210419 12:10:06 train:151](B[m VALIDATION | E [270] | CE: 0.02002 | ValmIOU: 0.960
+[32m[I 210419 12:10:12 train:123](B[m EN | E-I [271-4] | CE: 0.04078 | TrainmIOU: 0.916 | dT/rT: 1.386 / 4.493
+[32m[I 210419 12:10:17 train:123](B[m EN | E-I [272-4] | CE: 0.04714 | TrainmIOU: 0.923 | dT/rT: 1.296 / 4.498
+[32m[I 210419 12:10:23 train:123](B[m EN | E-I [273-4] | CE: 0.03061 | TrainmIOU: 0.940 | dT/rT: 1.303 / 4.501
+[32m[I 210419 12:10:29 train:123](B[m EN | E-I [274-4] | CE: 0.07820 | TrainmIOU: 0.867 | dT/rT: 1.183 / 4.509
+[32m[I 210419 12:10:35 train:123](B[m EN | E-I [275-4] | CE: 0.03483 | TrainmIOU: 0.937 | dT/rT: 1.186 / 4.513
+[32m[I 210419 12:10:40 train:123](B[m EN | E-I [276-4] | CE: 0.03752 | TrainmIOU: 0.930 | dT/rT: 1.356 / 4.497
+[32m[I 210419 12:10:46 train:123](B[m EN | E-I [277-4] | CE: 0.02903 | TrainmIOU: 0.948 | dT/rT: 1.252 / 4.496
+[32m[I 210419 12:10:52 train:123](B[m EN | E-I [278-4] | CE: 0.02849 | TrainmIOU: 0.953 | dT/rT: 1.266 / 4.497
+[32m[I 210419 12:10:58 train:123](B[m EN | E-I [279-4] | CE: 0.03157 | TrainmIOU: 0.945 | dT/rT: 1.177 / 4.497
+[32m[I 210419 12:11:04 train:123](B[m EN | E-I [280-4] | CE: 0.02570 | TrainmIOU: 0.954 | dT/rT: 1.358 / 4.497
+[32m[I 210419 12:11:04 train:129](B[m Dump weights experiments/lungseg-Epoch_00280.pth to disk...
+[32m[I 210419 12:11:04 train:139](B[m Do evaluation...
+[32m[I 210419 12:11:06 train:151](B[m VALIDATION | E [280] | CE: 0.66400 | ValmIOU: 0.614
+[32m[I 210419 12:11:12 train:123](B[m EN | E-I [281-4] | CE: 0.02363 | TrainmIOU: 0.958 | dT/rT: 1.280 / 4.493
+[32m[I 210419 12:11:17 train:123](B[m EN | E-I [282-4] | CE: 0.02328 | TrainmIOU: 0.956 | dT/rT: 1.368 / 4.501
+[32m[I 210419 12:11:23 train:123](B[m EN | E-I [283-4] | CE: 0.03041 | TrainmIOU: 0.947 | dT/rT: 1.193 / 4.496
+[32m[I 210419 12:11:29 train:123](B[m EN | E-I [284-4] | CE: 0.05773 | TrainmIOU: 0.883 | dT/rT: 1.373 / 4.501
+[32m[I 210419 12:11:35 train:123](B[m EN | E-I [285-4] | CE: 0.02708 | TrainmIOU: 0.951 | dT/rT: 1.301 / 4.495
+[32m[I 210419 12:11:41 train:123](B[m EN | E-I [286-4] | CE: 0.04851 | TrainmIOU: 0.914 | dT/rT: 1.176 / 4.497
+[32m[I 210419 12:11:46 train:123](B[m EN | E-I [287-4] | CE: 0.04367 | TrainmIOU: 0.913 | dT/rT: 1.246 / 4.498
+[32m[I 210419 12:11:52 train:123](B[m EN | E-I [288-4] | CE: 0.02435 | TrainmIOU: 0.953 | dT/rT: 1.189 / 4.500
+[32m[I 210419 12:11:58 train:123](B[m EN | E-I [289-4] | CE: 0.02277 | TrainmIOU: 0.965 | dT/rT: 1.293 / 4.495
+[32m[I 210419 12:12:03 train:123](B[m EN | E-I [290-4] | CE: 0.03457 | TrainmIOU: 0.940 | dT/rT: 1.225 / 4.517
+[32m[I 210419 12:12:03 train:129](B[m Dump weights experiments/lungseg-Epoch_00290.pth to disk...
+[32m[I 210419 12:12:04 train:139](B[m Do evaluation...
+[32m[I 210419 12:12:06 train:151](B[m VALIDATION | E [290] | CE: 0.21185 | ValmIOU: 0.770
+[32m[I 210419 12:12:12 train:123](B[m EN | E-I [291-4] | CE: 0.02521 | TrainmIOU: 0.946 | dT/rT: 1.334 / 4.509
+[32m[I 210419 12:12:18 train:123](B[m EN | E-I [292-4] | CE: 0.02621 | TrainmIOU: 0.947 | dT/rT: 1.328 / 4.520
+[32m[I 210419 12:12:23 train:123](B[m EN | E-I [293-4] | CE: 0.03290 | TrainmIOU: 0.948 | dT/rT: 1.254 / 4.491
+[32m[I 210419 12:12:29 train:123](B[m EN | E-I [294-4] | CE: 0.02072 | TrainmIOU: 0.962 | dT/rT: 1.355 / 4.503
+[32m[I 210419 12:12:35 train:123](B[m EN | E-I [295-4] | CE: 0.01941 | TrainmIOU: 0.971 | dT/rT: 1.181 / 4.499
+[32m[I 210419 12:12:41 train:123](B[m EN | E-I [296-4] | CE: 0.05107 | TrainmIOU: 0.895 | dT/rT: 1.346 / 4.501
+[32m[I 210419 12:12:46 train:123](B[m EN | E-I [297-4] | CE: 0.02449 | TrainmIOU: 0.954 | dT/rT: 1.183 / 4.498
+[32m[I 210419 12:12:52 train:123](B[m EN | E-I [298-4] | CE: 0.02777 | TrainmIOU: 0.949 | dT/rT: 1.311 / 4.500
+[32m[I 210419 12:12:58 train:123](B[m EN | E-I [299-4] | CE: 0.02818 | TrainmIOU: 0.947 | dT/rT: 1.327 / 4.497
+[32m[I 210419 12:12:58 train:129](B[m Dump weights experiments/lungseg-Epoch_00299.pth to disk...
+[32m[I 210419 12:12:58 train:139](B[m Do evaluation...
+[32m[I 210419 12:13:00 train:151](B[m VALIDATION | E [299] | CE: 0.02180 | ValmIOU: 0.954
